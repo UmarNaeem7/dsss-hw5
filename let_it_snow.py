@@ -13,7 +13,8 @@ def main(speed=0, bg_color="grey"):
     turtle_screen.bgcolor(bg_color)
   
  
-    """TODO: define different colors here"""
+    #change color mode to accept RGB values from 0-255
+    turtle_screen.colormode(255)
 
 
     for _ in range(10):
@@ -21,7 +22,8 @@ def main(speed=0, bg_color="grey"):
         size = 18
         pos = [np.random.randint(-300, 300), np.random.randint(-300, 300)]
 
-        """TODO: set snowflake color here (one of the colors defined above)"""
+        #assign random RGB values at each iteration to form a random pen color
+        myTurtle.pencolor(np.random.randint(0,256), np.random.randint(0,256), np.random.randint(0,256))
 
         # Go to the start position of the snowflake
         myTurtle.penup()
